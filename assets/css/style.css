@@ -189,3 +189,63 @@ body::before {
     margin-bottom: 8px;
   }
 }
+/* Updated research page layout */
+
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.theme-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 26px;
+  box-shadow: 0 4px 15px rgba(15, 12, 8, 0.04);
+}
+
+.theme-card h3 {
+  margin: 0 0 14px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.55rem;
+  line-height: 1.18;
+  color: var(--navy);
+  letter-spacing: -0.02em;
+}
+
+.theme-card p {
+  margin-bottom: 0;
+}
+
+.publication-year {
+  margin-top: 36px;
+}
+
+.publication-year h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+  color: var(--orange);
+  margin-bottom: 18px;
+}
+
+.pub-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0 0 8px;
+}
+
+.publication-item a {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--teal);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.publication-item a:hover {
+  text-decoration: underline;
+}

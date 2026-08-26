@@ -429,3 +429,47 @@ body::before {
     align-items: center;
   }
 }
+
+/* Principal Investigator profile */
+
+.pi-profile {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.pi-photo-wrap {
+  width: 180px;
+  height: 180px;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--paper-tint);
+}
+
+.pi-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pi-text p {
+  margin-top: 0;
+}
+
+.pi-text p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 760px) {
+  .pi-profile {
+    grid-template-columns: 1fr;
+  }
+
+  .pi-photo-wrap {
+    width: 160px;
+    height: 160px;
+  }
+}

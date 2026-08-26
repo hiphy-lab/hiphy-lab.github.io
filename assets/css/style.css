@@ -487,23 +487,23 @@ body::before {
 /* Larger PI text */
 
 .pi-text {
-  font-size: 1.12rem;
-  line-height: 1.6;
+  font-size: 1.25rem;
+  line-height: 1.65;
 }
 
 .pi-text strong {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.55rem;
+  font-size: 2rem;
   color: var(--navy);
   line-height: 1.2;
 }
 
 .pi-text p:first-child {
-  font-size: 1.08rem;
+  font-size: 1.22rem;
   color: var(--text);
 }
 
 .pi-text p:last-child {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   color: var(--muted);
 }

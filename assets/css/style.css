@@ -677,7 +677,7 @@ body::before {
 /* Designation below name */
 .person-tile .person-role {
   margin: 0 0 5px;
-  color: var(--orange);
+  color: var(--muted);
   font-size: 0.74rem;
   font-weight: 800;
   line-height: 1.3;

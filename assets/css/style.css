@@ -774,3 +774,7 @@ body::before {
     font-size: 0.95rem;
   }
 }
+
+.news-item:last-child {
+  border-bottom: none;
+}

@@ -1,3 +1,4 @@
+/*
 :root {
   --paper: #f3efe8;
   --paper-tint: #ebe5da;
@@ -14,7 +15,23 @@
   --border: rgba(15, 12, 8, 0.12);
   --shadow: 0 12px 35px rgba(15, 12, 8, 0.08);
 }
+*/
+:root {
+  --paper: #eef5f8;
+  --paper-tint: #dfecef;
+  --surface: #ffffff;
+  --ink: #071923;
+  --text: #172a33;
+  --muted: #5c6f78;
 
+  --navy: #06324a;
+  --blue: #126f9a;
+  --teal: #1f6f6a;
+  --orange: #d46b2a;
+
+  --border: rgba(7, 25, 35, 0.12);
+  --shadow: 0 12px 35px rgba(7, 25, 35, 0.08);
+}
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;

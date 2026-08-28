@@ -809,3 +809,12 @@ body::before {
 .news-item:last-child {
   border-bottom: none;
 }
+
+/* Heading icons */
+
+.heading-icon {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 0.9em;
+  vertical-align: -0.04em;
+}

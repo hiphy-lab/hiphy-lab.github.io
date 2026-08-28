@@ -728,8 +728,8 @@ body::before {
 .news-item {
   display: grid;
   grid-template-columns: 170px 1fr;
-  gap: 32px;
-  padding: 26px 0;
+  gap: 24px;
+  padding: 16px 0;
   border-bottom: 1px solid var(--border);
 }
 

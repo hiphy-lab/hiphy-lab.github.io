@@ -1054,3 +1054,34 @@ html {
   color: var(--navy);
   text-decoration: underline;
 }
+
+.footer-address-block p {
+  margin: 0 0 12px;
+}
+
+.footer-address-block .footer-email-button {
+  margin-top: 0;
+}
+
+.footer-contact-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.footer-contact-row .back-to-top {
+  margin-top: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .footer-contact-row {
+    display: block;
+  }
+
+  .footer-contact-row .back-to-top {
+    display: inline-block;
+    margin-top: 16px;
+  }
+}

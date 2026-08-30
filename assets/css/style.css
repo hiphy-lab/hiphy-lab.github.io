@@ -1021,7 +1021,7 @@ body::before {
 @media (max-width: 760px) {
   .footer-brand {
     align-items: flex-start;
-    text-align: left;
+    text-align: -10px;
   }
 
   .ut-logo {

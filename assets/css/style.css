@@ -852,14 +852,14 @@ body::before {
 }
 
 .news-archive-list {
-  border-top: 1px solid var(--border);
+  border-top: none;
 }
 
 .news-archive-item {
   display: grid;
   grid-template-columns: 170px 1fr;
   gap: 34px;
-  padding: 26px 0;
+  padding: 16px 0;
   border-bottom: 1px solid var(--border);
 }
 

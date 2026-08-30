@@ -1015,3 +1015,22 @@ body::before {
     width: 155px;
   }
 }
+
+/* Mobile footer logo alignment */
+
+@media (max-width: 760px) {
+  .footer-brand {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .ut-logo {
+    align-self: flex-start;
+    margin-left: 0;
+  }
+
+  .footer-lab-text {
+    align-items: flex-start;
+    text-align: left;
+  }
+}

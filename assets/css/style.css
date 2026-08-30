@@ -947,7 +947,7 @@ body::before {
 }
 
 .ut-logo {
-  width: 150px;
+  width: 180px;
   height: auto;
   display: block;
 }
@@ -1012,6 +1012,6 @@ body::before {
   }
 
   .ut-logo {
-    width: 135px;
+    width: 155px;
   }
 }

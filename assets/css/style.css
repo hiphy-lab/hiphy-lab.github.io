@@ -1034,3 +1034,23 @@ body::before {
     text-align: left;
   }
 }
+
+/* Back to top footer link */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.back-to-top {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--teal);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.back-to-top:hover {
+  color: var(--navy);
+  text-decoration: underline;
+}

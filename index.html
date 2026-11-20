@@ -341,6 +341,87 @@
 </footer>
 
   
+<script>
+(function () {
+
+  const images = document.querySelectorAll(
+    ".hero-showcase-image"
+  );
+
+  const toggle = document.querySelector(
+    ".hero-showcase-toggle"
+  );
+
+  if (!images.length || !toggle) return;
+
+  let currentImage = 0;
+  let slideshowTimer = null;
+
+  const interval = 5000;
+
+  const reducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  function showNextImage() {
+
+    images[currentImage].classList.remove(
+      "is-visible"
+    );
+
+    currentImage = (currentImage + 1) % images.length;
+
+    images[currentImage].classList.add(
+      "is-visible"
+    );
+
+  }
+
+  function startSlideshow() {
+    if (slideshowTimer !== null) return;
+
+    slideshowTimer = setInterval(
+      showNextImage,
+      interval
+    );
+
+    toggle.textContent = "Pause slideshow";
+  }
+
+  function stopSlideshow() {
+    clearInterval(slideshowTimer);
+    slideshowTimer = null;
+
+    toggle.textContent = "Play slideshow";
+  }
+
+  toggle.addEventListener("click", function () {
+
+    if (slideshowTimer !== null) {
+      stopSlideshow();
+    } else {
+      startSlideshow();
+    }
+
+  });
+
+  // Start automatically unless reduced motion is preferred
+  if (!reducedMotion) {
+    startSlideshow();
+  } else {
+    toggle.textContent = "Play slideshow";
+  }
+
+  // Pause while the browser tab is hidden
+  document.addEventListener("visibilitychange", function () {
+    if (document.hidden && slideshowTimer !== null) {
+      stopSlideshow();
+    }
+  });
+
+})();
+</script>
+
 
 
 </body>

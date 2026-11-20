@@ -1187,7 +1187,7 @@ html {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: clamp(250px, 42vw, 480px);
+  height: clamp(250px, 42vw, 400px);
   padding: 18px;
   box-sizing: border-box;
 }

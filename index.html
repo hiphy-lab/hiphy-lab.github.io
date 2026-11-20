@@ -11,6 +11,50 @@
 
   <header class="header">
     <div class="container">
+      
+<!-- Automatic hero image slideshow -->
+
+<div class="hero-showcase" aria-label="HiPhy Lab research images">
+
+  <img
+    src="assets/images/H4.png"
+    alt="Time-resolved CO2 sublimation experiments"
+    class="hero-showcase-image is-visible"
+  >
+
+  <img
+    src="assets/images/H2.png"
+    alt="Schlieren visualization of CO2 sublimation"
+    class="hero-showcase-image"
+  >
+
+  <img
+    src="assets/images/H6.png"
+    alt="Optical coherence tomography of dry ice interfaces"
+    class="hero-showcase-image"
+  >
+
+  <img
+    src="assets/images/H5.png"
+    alt="Microfabricated capacitive sensor"
+    class="hero-showcase-image"
+  >
+
+  <img
+    src="assets/images/H8.png"
+    alt="X-ray visualization of grooved heat-pipe structures"
+    class="hero-showcase-image"
+  >
+
+</div>
+
+<div class="hero-showcase-controls">
+  <button type="button" class="hero-showcase-toggle">
+    Pause slideshow
+  </button>
+</div>
+
+      
       <h1>HiPhy Lab</h1>
       <p>Heat Transport & Interfacial Phase-Change Physics</p>
 
@@ -44,147 +88,7 @@
   </section>
 
   
-<!-- RESEARCH HIGHLIGHTS GALLERY -->
 
-<section class="section hph-gallery" id="research-highlights">
-  <div class="container">
-
-    <span class="eyebrow">Research highlights</span>
-    <h2>Research in images</h2>
-
-    <div class="hph-gallery-frame">
-
-      <!-- Image 1 -->
-      <figure class="hph-slide" id="hph-slide-1">
-        <a href="assets/images/H4.png"
-           target="_blank" rel="noopener">
-          <img src="assets/images/H4.png"
-               alt="Time-resolved images of dry ice disc sublimation">
-        </a>
-
-        <figcaption>
-          CO₂ sublimation and Leidenfrost dynamics
-        </figcaption>
-      </figure>
-
-      <!-- Image 2 -->
-      <figure class="hph-slide" id="hph-slide-2" hidden>
-        <a href="assets/images/H2.png"
-           target="_blank" rel="noopener">
-          <img src="assets/images/H2.png"
-               alt="Schlieren visualization around a dry ice sphere"
-               loading="lazy">
-        </a>
-
-        <figcaption>
-          Schlieren visualization of interfacial transport
-        </figcaption>
-      </figure>
-
-      <!-- Image 3 -->
-      <figure class="hph-slide" id="hph-slide-3" hidden>
-        <a href="assets/images/H6.png"
-           target="_blank" rel="noopener">
-          <img src="assets/images/H6.png"
-               alt="Optical coherence tomography of a dry ice interface"
-               loading="lazy">
-        </a>
-
-        <figcaption>
-          Optical coherence tomography of phase-change interfaces
-        </figcaption>
-      </figure>
-
-      <!-- Image 4 -->
-      <figure class="hph-slide" id="hph-slide-4" hidden>
-        <a href="assets/images/H5.png"
-           target="_blank" rel="noopener">
-          <img src="assets/images/H5.png"
-               alt="Microfabricated capacitive sensor"
-               loading="lazy">
-        </a>
-
-        <figcaption>
-          Capacitive sensing for phase-change measurements
-        </figcaption>
-      </figure>
-
-      <!-- Image 5 -->
-      <figure class="hph-slide" id="hph-slide-5" hidden>
-        <a href="assets/images/H8.png"
-           target="_blank" rel="noopener">
-          <img src="assets/images/H8.png"
-               alt="X-ray visualization of grooved heat-pipe structures"
-               loading="lazy">
-        </a>
-
-        <figcaption>
-          X-ray visualization of heat-pipe structures
-        </figcaption>
-      </figure>
-
-    </div>
-
-    <!-- Navigation controls -->
-
-    <div class="hph-gallery-navigation">
-
-      <button type="button"
-              class="hph-gallery-arrow hph-prev"
-              aria-label="Previous research image">
-        &#10094;
-      </button>
-
-      <div class="hph-gallery-dots"
-           role="group"
-           aria-label="Choose research image">
-
-        <button type="button"
-                class="hph-gallery-dot active"
-                data-slide="0"
-                aria-label="Show image 1"
-                aria-pressed="true"></button>
-
-        <button type="button"
-                class="hph-gallery-dot"
-                data-slide="1"
-                aria-label="Show image 2"
-                aria-pressed="false"></button>
-
-        <button type="button"
-                class="hph-gallery-dot"
-                data-slide="2"
-                aria-label="Show image 3"
-                aria-pressed="false"></button>
-
-        <button type="button"
-                class="hph-gallery-dot"
-                data-slide="3"
-                aria-label="Show image 4"
-                aria-pressed="false"></button>
-
-        <button type="button"
-                class="hph-gallery-dot"
-                data-slide="4"
-                aria-label="Show image 5"
-                aria-pressed="false"></button>
-
-      </div>
-
-      <button type="button"
-              class="hph-gallery-arrow hph-next"
-              aria-label="Next research image">
-        &#10095;
-      </button>
-
-    </div>
-
-    <p class="hph-gallery-counter" aria-live="polite">
-      1 / 5
-    </p>
-
-  </div>
-</section>
 
 
   <main>
@@ -437,64 +341,6 @@
 </footer>
 
   
-<script>
-(function () {
-
-  const gallery = document.querySelector(".hph-gallery");
-
-  if (!gallery) return;
-
-  const slides = Array.from(
-    gallery.querySelectorAll(".hph-slide")
-  );
-
-  const dots = Array.from(
-    gallery.querySelectorAll(".hph-gallery-dot")
-  );
-
-  const previousButton = gallery.querySelector(".hph-prev");
-  const nextButton = gallery.querySelector(".hph-next");
-  const counter = gallery.querySelector(".hph-gallery-counter");
-
-  let currentSlide = 0;
-
-  function showSlide(index) {
-
-    currentSlide = (index + slides.length) % slides.length;
-
-    slides.forEach((slide, i) => {
-      slide.hidden = i !== currentSlide;
-    });
-
-    dots.forEach((dot, i) => {
-      const isActive = i === currentSlide;
-
-      dot.classList.toggle("active", isActive);
-      dot.setAttribute("aria-pressed", String(isActive));
-    });
-
-    counter.textContent =
-      (currentSlide + 1) + " / " + slides.length;
-  }
-
-  previousButton.addEventListener("click", function () {
-    showSlide(currentSlide - 1);
-  });
-
-  nextButton.addEventListener("click", function () {
-    showSlide(currentSlide + 1);
-  });
-
-  dots.forEach((dot, index) => {
-    dot.addEventListener("click", function () {
-      showSlide(index);
-    });
-  });
-
-  showSlide(0);
-
-})();
-</script>
 
 
 </body>

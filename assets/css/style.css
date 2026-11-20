@@ -1542,3 +1542,23 @@ html {
 
 }
 
+/* Align homepage heading and introductory text */
+
+.home-hero h2,
+.home-hero p {
+  max-width: 950px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-hero h2 {
+  text-align: left;
+}
+
+.home-hero p {
+  text-align: justify;
+  text-align-last: left;
+  hyphens: auto;
+}

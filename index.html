@@ -436,5 +436,66 @@
   </div>
 </footer>
 
+  
+<script>
+(function () {
+
+  const gallery = document.querySelector(".hph-gallery");
+
+  if (!gallery) return;
+
+  const slides = Array.from(
+    gallery.querySelectorAll(".hph-slide")
+  );
+
+  const dots = Array.from(
+    gallery.querySelectorAll(".hph-gallery-dot")
+  );
+
+  const previousButton = gallery.querySelector(".hph-prev");
+  const nextButton = gallery.querySelector(".hph-next");
+  const counter = gallery.querySelector(".hph-gallery-counter");
+
+  let currentSlide = 0;
+
+  function showSlide(index) {
+
+    currentSlide = (index + slides.length) % slides.length;
+
+    slides.forEach((slide, i) => {
+      slide.hidden = i !== currentSlide;
+    });
+
+    dots.forEach((dot, i) => {
+      const isActive = i === currentSlide;
+
+      dot.classList.toggle("active", isActive);
+      dot.setAttribute("aria-pressed", String(isActive));
+    });
+
+    counter.textContent =
+      (currentSlide + 1) + " / " + slides.length;
+  }
+
+  previousButton.addEventListener("click", function () {
+    showSlide(currentSlide - 1);
+  });
+
+  nextButton.addEventListener("click", function () {
+    showSlide(currentSlide + 1);
+  });
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", function () {
+      showSlide(index);
+    });
+  });
+
+  showSlide(0);
+
+})();
+</script>
+
+
 </body>
 </html>

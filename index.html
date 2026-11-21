@@ -61,12 +61,6 @@
   >
 
 </div>
-
-<div class="hero-showcase-controls">
-  <button type="button" class="hero-showcase-toggle">
-    Pause slideshow
-  </button>
-</div>
       <h2>Understanding heat transport and phase transitions at interfaces</h2>
 
       <p>
@@ -338,6 +332,7 @@
 </footer>
 
   
+
 <script>
 (function () {
 
@@ -345,20 +340,13 @@
     ".hero-showcase-image"
   );
 
-  const toggle = document.querySelector(
-    ".hero-showcase-toggle"
-  );
-
-  if (!images.length || !toggle) return;
+  if (images.length < 2) return;
 
   let currentImage = 0;
   let slideshowTimer = null;
 
-  const interval = 5000;
-
-  const reducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  ).matches;
+  // Time between images (milliseconds)
+  const interval = 3000;
 
   function showNextImage() {
 
@@ -371,7 +359,6 @@
     images[currentImage].classList.add(
       "is-visible"
     );
-
   }
 
   function startSlideshow() {
@@ -381,43 +368,37 @@
       showNextImage,
       interval
     );
-
-    toggle.textContent = "Pause slideshow";
   }
 
   function stopSlideshow() {
     clearInterval(slideshowTimer);
     slideshowTimer = null;
-
-    toggle.textContent = "Play slideshow";
   }
 
-  toggle.addEventListener("click", function () {
+  // Start automatically
+  const reducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
 
-    if (slideshowTimer !== null) {
+  if (!reducedMotion) {
+    startSlideshow();
+  }
+
+  // Pause when browser tab is hidden,
+  // resume when the visitor returns
+  document.addEventListener("visibilitychange", function () {
+
+    if (document.hidden) {
       stopSlideshow();
-    } else {
+    } else if (!reducedMotion) {
       startSlideshow();
     }
 
   });
 
-  // Start automatically unless reduced motion is preferred
-  if (!reducedMotion) {
-    startSlideshow();
-  } else {
-    toggle.textContent = "Play slideshow";
-  }
-
-  // Pause while the browser tab is hidden
-  document.addEventListener("visibilitychange", function () {
-    if (document.hidden && slideshowTimer !== null) {
-      stopSlideshow();
-    }
-  });
-
 })();
 </script>
+
 
 
 

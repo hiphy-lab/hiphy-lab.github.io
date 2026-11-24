@@ -760,7 +760,7 @@ body::before {
   display: grid;
   grid-template-columns: 170px 1fr;
   gap: 24px;
-  padding: 16px 0;
+  padding: 8px 0;
   border-bottom: 1px solid var(--border);
 }
 

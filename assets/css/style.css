@@ -351,9 +351,28 @@ body::before {
   font-size: 1.02rem;
 }
 
+
+/* Compact spacing between publication years */
+
 .publication-year {
-  margin-top: 36px;
+  margin-top: 18px;
 }
+
+/* Less space between "All publications" and 2026 */
+.section h2 + .publication-year {
+  margin-top: 12px;
+}
+
+/* Remove default heading margin and reduce bottom gap */
+.publication-year h3 {
+  margin: 0 0 12px;
+}
+
+/* Remove excess space after the last publication of each year */
+.publication-year .publication-item:last-child {
+  margin-bottom: 0;
+}
+
 
 .publication-year h3 {
   font-family: Georgia, "Times New Roman", serif;

@@ -384,7 +384,7 @@ body::before {
 
 .publication-year h3 {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 2rem;
+  font-size: 1.3rem;
   color: var(--orange);
   margin-bottom: 18px;
 }

@@ -1751,13 +1751,13 @@ html {
 /* Consistent top spacing for secondary pages */
 
 .page-heading-compact {
-  padding-top: 60px;
+  padding-top: 42px;
 }
 
 /* Smaller spacing on mobile */
 
 @media (max-width: 760px) {
   .page-heading-compact {
-    padding-top: 35px;
+    padding-top: 28px;
   }
 }

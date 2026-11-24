@@ -1786,3 +1786,20 @@ html {
   color: var(--navy);
   margin: 0 0 12px;
 }
+
+
+/* =========================================
+   RESEARCH PROJECT DESCRIPTION FORMATTING
+========================================= */
+
+/* Justify project descriptions */
+.project-showcase .project-body p {
+  text-align: justify;
+  text-align-last: left;
+  hyphens: auto;
+}
+
+/* Remove dividing line below final project */
+.project-showcase .project-panel:last-child {
+  border-bottom: none;
+}

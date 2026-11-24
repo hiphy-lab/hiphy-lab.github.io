@@ -1761,3 +1761,28 @@ html {
     padding-top: 28px;
   }
 }
+
+
+/* =========================================
+   COMPACT RESEARCH PROJECTS SECTION
+========================================= */
+
+/* Reduce space below section heading */
+.projects-section .project-showcase {
+  margin-top: 10px;
+}
+
+/* Reduce space inside each project entry */
+.projects-section .project-panel {
+  padding: 18px 0 24px;
+}
+
+/* Match project titles to research theme titles */
+.projects-section .project-body h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.55rem;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+  margin: 0 0 12px;
+}

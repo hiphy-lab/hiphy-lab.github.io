@@ -1895,3 +1895,40 @@ html {
 
 }
 
+
+/* ========================================
+   COMPACT NEWS ARCHIVE SPACING
+======================================== */
+
+/* Reduce vertical spacing between news items */
+
+.news-archive-item {
+  padding: 8px 0;
+}
+
+/* Remove extra space below descriptions */
+
+.news-archive-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Reduce spacing below category labels */
+
+.news-archive-content .news-category {
+  margin-bottom: 3px;
+}
+
+/* Reduce space between title and description */
+
+.news-archive-content h3 {
+  margin-bottom: 5px;
+}
+
+/* Mobile spacing */
+
+@media (max-width: 760px) {
+  .news-archive-item {
+    padding: 10px 0;
+  }
+}
+

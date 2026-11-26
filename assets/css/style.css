@@ -1974,3 +1974,35 @@ html {
     font-size: 0.85rem;
   }
 }
+
+
+/* MSc and BSc thesis assignment list */
+
+.thesis-project-list {
+  padding-left: 24px;
+  margin: 16px 0 22px;
+}
+
+.thesis-project-list li {
+  padding-left: 6px;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.thesis-project-list li::marker {
+  color: var(--teal);
+  font-weight: 700;
+}
+
+.thesis-project-list strong {
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.thesis-application {
+  display: block;
+  margin-top: 3px;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--muted);
+}
